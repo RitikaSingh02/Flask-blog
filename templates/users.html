@@ -1,0 +1,23 @@
+{%extends "layout.html"%}
+{%block content%}
+{%for person in posts.data%}
+<!-- <h1>{{person.first_name}} {{person.last_name}}</h1>
+<p>{{person.email}}</p>
+<img src={{person.avatar}}></img> -->
+<article class="media content-section">
+
+    <div class="media-body">
+        <div class="article-metadata">
+            <br>
+            <br>
+            <br>
+            <a class="mr-2" href="#">{{person.first_name}} {{person.last_name}}</a>
+            <small class="text-muted">{{person.email}}</small>
+        </div>
+        <h2><a class="article-title" href="#">{{person.email}}'s title</a></h2>
+        <img src={{person.avatar}}></img>
+
+    </div>
+</article>
+{%endfor%}
+{% endblock content%}
